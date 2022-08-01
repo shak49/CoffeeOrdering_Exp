@@ -11,7 +11,10 @@ struct ContentView: View {
     @ObservedObject private var orderListVM = OrderListViewModel()
     
     var body: some View {
-        OrderListView(orders: self.orderListVM.orders)
+        NavigationView {
+            OrderListView(orders: self.orderListVM.orders)
+                .navigationBarTitle("Coffee Orders")
+        }
     }
 }
 
