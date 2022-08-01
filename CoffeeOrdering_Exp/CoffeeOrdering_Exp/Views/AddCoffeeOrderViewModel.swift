@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import Combine
 
 
 class AddCoffeeOrderViewModel: ObservableObject {
-    var name: String = ""
     private var service: OrderAPIService
+    
+    var name: String = ""
     
     @Published var coffeeName: String = ""
     @Published var size: String = "Medium"
